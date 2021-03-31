@@ -236,8 +236,8 @@ def create_app(test_config=None):
             abort(404, {"message": "movie with id:{} not found".format(movie_id)})
 
         # extract parameters from the request body
-        title = body.get("title", movie_edit.name)
-        release_date = body.get("release_date", movie_edit.gender)
+        title = body.get("title", movie_edit.title)
+        release_date = body.get("release_date", movie_edit.release_date)
 
         movie_edit.title = title
         movie_edit.release_date = release_date
