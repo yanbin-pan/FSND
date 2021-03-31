@@ -1,0 +1,266 @@
+{
+	"id": "d2b30c7a-1e2e-41ab-961c-a635fde39a10",
+	"name": "udacity-coffe-shop",
+	"timestamp": "2021-03-28T20:01:56.236Z",
+	"collection_id": "a38d06fa-3e0f-4fbc-b4bf-17efa4e884bf",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 8,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a96e4114-c0c2-44a3-b4b2-c3420bea78b1",
+			"name": "public /drink endpoint",
+			"url": "http://127.0.0.1:5000/drinks",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 this is a public endpoint": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 this is a public endpoint": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code 200 this is a public endpoint": true
+				}
+			]
+		},
+		{
+			"id": "99b86107-4b8f-4478-9aa9-f399525fc2a6",
+			"name": "drinks-detail without JWT",
+			"url": "http://127.0.0.1:5000/drinks-detail",
+			"time": 8,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Fail without JWT": true
+			},
+			"testPassFailCounts": {
+				"Fail without JWT": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Fail without JWT": true
+				}
+			]
+		},
+		{
+			"id": "f1013ef6-b6ef-40ec-822d-64dbeb75e94d",
+			"name": "drinks-details with JWT",
+			"url": "http://127.0.0.1:5000/drinks-detail",
+			"time": 5156,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 if the JWT is valid": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 if the JWT is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5156
+			],
+			"allTests": [
+				{
+					"Status code 200 if the JWT is valid": true
+				}
+			]
+		},
+		{
+			"id": "1fbe3163-6f5b-48a9-872a-47f87809cee5",
+			"name": "delete drink",
+			"url": "http://127.0.0.1:5000/drinks/1",
+			"time": 5090,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND"
+			},
+			"tests": {
+				"delete an non existing item results in 404 resource not found": true
+			},
+			"testPassFailCounts": {
+				"delete an non existing item results in 404 resource not found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5090
+			],
+			"allTests": [
+				{
+					"delete an non existing item results in 404 resource not found": true
+				}
+			]
+		},
+		{
+			"id": "a129d452-139f-4729-bb36-10edd597eda8",
+			"name": "patch drink",
+			"url": "http://127.0.0.1:5000/drinks/2",
+			"time": 5134,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 this is a public endpoint": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 this is a public endpoint": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5134
+			],
+			"allTests": [
+				{
+					"Status code 200 this is a public endpoint": true
+				}
+			]
+		},
+		{
+			"id": "1e1ed8e2-c886-409a-b2aa-9bfae7431fed",
+			"name": "drinks-detail with JWT",
+			"url": "http://127.0.0.1:5000/drinks-detail",
+			"time": 5170,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Pass wit JWT barista has access": true
+			},
+			"testPassFailCounts": {
+				"Pass wit JWT barista has access": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5170
+			],
+			"allTests": [
+				{
+					"Pass wit JWT barista has access": true
+				}
+			]
+		},
+		{
+			"id": "8df5b3e7-35c6-4779-9c77-7be691cd97fd",
+			"name": "delete drink",
+			"url": "http://127.0.0.1:5000/drinks/1",
+			"time": 5131,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Fail Barista can't delete drinks": true
+			},
+			"testPassFailCounts": {
+				"Fail Barista can't delete drinks": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5131
+			],
+			"allTests": [
+				{
+					"Fail Barista can't delete drinks": true
+				}
+			]
+		},
+		{
+			"id": "533ce8ce-a1d7-42ae-bb08-f9780b7d0685",
+			"name": "patch drink",
+			"url": "http://127.0.0.1:5000/drinks/2",
+			"time": 5102,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Fail Barista can't edit drinks": true
+			},
+			"testPassFailCounts": {
+				"Fail Barista can't edit drinks": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5102
+			],
+			"allTests": [
+				{
+					"Fail Barista can't edit drinks": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 30802,
+	"collection": {
+		"requests": [
+			{
+				"id": "a96e4114-c0c2-44a3-b4b2-c3420bea78b1",
+				"method": "GET"
+			},
+			{
+				"id": "99b86107-4b8f-4478-9aa9-f399525fc2a6",
+				"method": "GET"
+			},
+			{
+				"id": "f1013ef6-b6ef-40ec-822d-64dbeb75e94d",
+				"method": "GET"
+			},
+			{
+				"id": "1fbe3163-6f5b-48a9-872a-47f87809cee5",
+				"method": "DELETE"
+			},
+			{
+				"id": "a129d452-139f-4729-bb36-10edd597eda8",
+				"method": "PATCH"
+			},
+			{
+				"id": "1e1ed8e2-c886-409a-b2aa-9bfae7431fed",
+				"method": "GET"
+			},
+			{
+				"id": "8df5b3e7-35c6-4779-9c77-7be691cd97fd",
+				"method": "DELETE"
+			},
+			{
+				"id": "533ce8ce-a1d7-42ae-bb08-f9780b7d0685",
+				"method": "PATCH"
+			}
+		]
+	}
+}
